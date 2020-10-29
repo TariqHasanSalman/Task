@@ -1,0 +1,140 @@
+.header{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.filters{
+  overflow: hidden;
+  max-width: 13%;
+  font-size: 0.8vw;
+  background-color:white;
+  margin-right: 1.5%;
+  border: solid 0.5px #0275d8  ;
+}
+.filters:hover{
+  background-color:rgb(2, 117, 216,.8);
+}
+.filters button{
+  margin-right:2% ;
+  background-color: white;
+}
+.buttonsContanier{
+  margin-left: 3% !important;
+  margin-top: 2% !important;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  flex-flow: row;
+}
+.container{
+  padding: 0;
+  margin: 0;
+  width: 100vw ;
+ height: 100vh;
+ margin-top: 6vh;
+}
+.leftSaidMap{
+  width: 100%;
+
+}
+.search-container{
+  margin-top: 3%;
+  margin-left: 3%;
+  max-width: 30vw;
+  min-width: 25vw;
+}
+app-map{
+  width: 50vw;
+  z-index: -1;
+}
+
+.row{
+  width:100VW ;
+  padding: 0;
+  margin: 0;
+}
+.col,.col-6{
+  padding: 0;
+}
+.propartis{
+  margin-top: 5%;
+
+}
+.propartis h4{
+margin-left: 3.5%;
+}
+.flex-items{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+max-height: 70vh;
+overflow-y: scroll;
+}
+.item{
+  width: 46%;
+  margin-left: 2%;
+}
+
+.main-flex{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+.flexitems{
+  max-width: 49vw;
+  min-width: 49vw;
+}
+h4{
+  font-size: 2.5vw;
+}
+@media only screen and (max-width: 700px) {
+  .main-flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .flexitems{
+    max-width: 99vw;
+    min-width: 99vw;
+
+  }
+  .search-container{
+    min-width: 50%;
+    max-width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  app-search{
+    width: 100%;
+  float: right;
+  }
+  .container{
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .filters{
+    font-size: 1vw;
+  }
+.item{
+  width: 45%;
+  margin-left: 2%;
+}
+
+}
+@media only screen and (min-width: 2000px) {
+
+  .item{
+    width: 350px !important;
+    margin-left: 2%;
+  }
+
+  }
+
+

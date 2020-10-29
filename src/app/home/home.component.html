@@ -1,0 +1,47 @@
+<div style="width: 98vw; box-sizing: border-box">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="container">
+    <div class="main-flex">
+      <div class="flexitems">
+        <div class="leftSaidMap">
+          <app-map></app-map>
+        </div>
+      </div>
+      <div class="flexitems">
+        <div class="search-container">
+          <app-search (exportsearch)="setSearchresut($event)"> </app-search>
+        </div>
+
+        <div class="buttonsContanier row">
+          <button (click)="filterResult('All')"class="filters rounded-pill"><span style="padding: 1.5px;">all</span></button>
+          <button (click)="filterResult('Rating')" class="filters rounded-pill"><span style="padding: 1.5px;">Rating</span></button>
+          <button (click)="filterResult('COC')" class="filters rounded-pill"><span style="padding: 1.5px;">COC Rturne</span></button>
+          <button (click)="filterResult('cap_rate')" class="filters rounded-pill"><span style="padding: 1.5px;">CAP Rate</span></button>
+          <button (click)="filterResult('Buget')" class="filters rounded-pill"><span style="padding: 1.5px;">Budget</span></button>
+          <button (click)="filterResult('rental_income')" class="filters rounded-pill"><span style="padding: 1.5px;">Rental Income</span></button>
+          <button (click)="filterResult('Neighborhood')" class="filters rounded-pill"><span style="padding: 1.5px;">Neighborhood</span></button>
+          <button (click)="filterResult('More filters')" class="filters rounded-pill"><span style="padding: 1.5px;">More filters</span></button>
+        </div>
+
+        <div class="propartis">
+          <h4 *ngIf="searched">
+            {{ numberOfResualt }} proparites found on
+            <span style="color: #0259db94">{{ city }}</span>
+          </h4>
+          <h4 *ngIf="!searched">
+            <span style="color: #0259db94">Best Deals</span>
+          </h4>
+          <div class="flex-items">
+            <app-real-estate
+              [propertie]="i"
+              *ngFor="let i of items | slice: 0:9"
+              class="item"
+            ></app-real-estate>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

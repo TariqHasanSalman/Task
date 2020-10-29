@@ -1,0 +1,5 @@
+this component is used to search for propartes of a city
+search feild only takes litters and has an autocomplet algorithm
+that keep traking your input and give you best matches cities
+you can select a city by clicking on it or by using arrows or
+ by hiting the search button or by pressing enter

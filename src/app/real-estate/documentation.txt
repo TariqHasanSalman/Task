@@ -1,0 +1,2 @@
+this component is used to view one propertie data
+these data comes from the the parent "HomeComponent"

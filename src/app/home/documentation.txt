@@ -1,0 +1,9 @@
+this component is the main page component it's the parent of all other components
+mainly it had 3 parts:
+part 1: the header on the top of page
+part 2: the left said map
+part 3 : the right search and result said ; this part contins search component and real-estat component
+
+each of part 2 and 3 has 50% of page width
+
+used methods will be expland in ts files

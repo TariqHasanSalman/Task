@@ -1,0 +1,28 @@
+  <div class='width-25'></div>
+  <div class="width-half">
+    <div #clickedInSaid class="clickedInSaid">
+      <form [formGroup]='stateForm' autocomplete="new-password" novalidate>
+       <div class="mainsearch">
+
+      <div class="input-group">
+        <input  (ngModelChange)="filter()" autocomplete="off" id='search' placeholder="Search for a state" class="form-control"  formControlName='search' (click)=' openDropDown() ' type='text'>
+        <div class="input-group-append">
+          <button (click)="search()" class="btn btn-secondary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+       </div>
+     </form>
+      <div id="search" >
+          <div id="searchBar" *ngIf='showDropDown' class='search-drop-down '>
+              <div (mouseover)='mouseOver(i)' id={{i}} (click)='selectValue(s)' class='search-results ' *ngFor="let s of filterdstates |slice:0:5;let i=index ">
+                  <a>
+                         {{s}}
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

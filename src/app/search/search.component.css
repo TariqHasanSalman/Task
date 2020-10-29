@@ -1,0 +1,52 @@
+
+.icon-pos{
+position: absolute;
+top: 1.5vh;
+right:1vw;
+font-size: 2vw;
+}
+
+.search-bar ,.mainsearch{
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 2vw;
+  min-height: 60%;
+  box-sizing: border-box;
+  text-align: center;
+}
+input{
+  max-width: 90%;
+}
+
+
+.mainsearch{
+  position: relative;
+
+
+}
+.search-drop-down {
+  position: absolute;
+  width: 30vw;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 10;
+  background-color: #F6F6F6;
+  font-family: sans-serif;
+  opacity: 0.98;
+}
+
+.search-results {
+  padding: 10px;
+}
+
+.search-results:hover {
+  background: #707070;
+}
+
+.color-purple {
+  color: #A550BC;
+}
+@media only screen and (max-width: 700px) {
+  .search-drop-down {
+    min-width: 50%}
+}

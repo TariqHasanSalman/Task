@@ -1,0 +1,62 @@
+<div class="contanir"><!--for the full product-->
+    <div class="img"> <!--for the product img -->
+      <img src={{propertie.image_url}} alt="house">
+      <div class="basic-info"><!--for price space ..etc-->
+        <span style="margin-left: 3%;">{{propertie.beds}} BDS | {{propertie.baths}} ba | {{propertie.sqft}} sqr</span>
+        <span style="float: right;margin-right: 3%;">{{propertie.list_price}}$</span>
+      </div>
+    </div>
+    <div class="data-section"> <!-- for the hole data section-->
+        <div class="location"> <!--for location and rate -->
+          <span class="loc">{{propertie.address}}</span>
+         <span class="stars">
+          <span *ngFor="let i of rates">
+            <span *ngIf="i==1" class=" fas fa-star"></span>
+            <span *ngIf="i==0" class=" far fa-star"></span>
+          </span>
+          </span>
+        </div>
+        <div class="comparison-section"><!--for Airbnb and trad data-->
+          <div><hr></div>
+          <div class="compare">
+          <div class="row">
+            <div class="col-3 offset-6 fontstyling">Airbnb</div>
+            <div class="col-3 fontstyling">Trad.</div>
+          </div>
+          <div class="row">
+            <div class="col-6">CASH ON CASH</div>
+            <div class="col-3" *ngIf="propertie.COC.airbnb!=null"><span ngif>{{propertie.COC.airbnb.toFixed(2)}}</span><span>%</span>
+                      </div>
+            <div class="col-3"*ngIf="propertie.COC.traditional!=null"><span>{{propertie.COC.traditional.toFixed(2)}}</span><span >%</span>
+
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-6">CAP RATE</div>
+            <div class="col-3"*ngIf="propertie.cap_rate.airbnb!=null"><span>{{propertie.cap_rate.airbnb.toFixed(2)}}</span><span >%</span>
+            </div>
+            <div class="col-3"*ngIf="propertie.cap_rate.traditional!=null"><span>{{propertie.cap_rate.traditional.toFixed(2)}}</span><span >%</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">RENTAL INCOME</div>
+            <div class="col-3"*ngIf="propertie.rental_income.airbnb!=null"><span>{{propertie.rental_income.airbnb.toFixed(0)}}</span><span >$</span>
+
+            </div>
+            <div class="col-3"*ngIf="propertie.rental_income.traditional!=null"><span>{{propertie.rental_income.traditional.toFixed(0)}}</span>
+            <span >$</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="footer"><!--for the footer-->
+          <div><hr></div>
+
+          <div>VIEW NEIGHBORHOOD ANALYTICS</div>
+        </div>
+    </div>
+
+</div>
